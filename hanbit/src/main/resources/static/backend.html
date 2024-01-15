@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>이 HTML의 제목입니다.</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        안녕하세요. <strong>resource/static 폴더</strong>에 추가된 backend.html입니다.
+        <br>
+        <a href="https://www.google.com/" target="_blank\">구글로 이동</a>
+
+        <form action="./article" method="post">
+            <input type="text" name="title">
+            <input type="text" name="content">
+            <input type="submit">
+        </form>
+
+        <script>
+            document.querySelector('a').innerText = 'a 태그 내부 텍스트 변경'
+        </script>
+        <!--script 태그는 자바스크립트를 넣는 역할을 한다.-->
+        <!--script 태그는 가장 마지막에 작성해야 정상 작동한다.-->
+    </body>
+</html>
