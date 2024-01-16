@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            function onReadyStateChange(event){
+                //console.log(ajaxRequest.readyState);
+                console.log("event.currentTarget: "+event.currentTarget);
+                console.log("ajaxRequest: "+ajaxRequest);
+                if(ajaxRequest.readyState === XMLHttpRequest.DONE){
+                    if(ajaxRequest.status === 200){
+                        <!--200은 요청을 성공했음을 의미하는 상태 코드-->
+                        console.log(ajaxRequest.responseText);
+                    }else{
+                        console.error('request failed');
+                    }
+                }
+            }
+
+            const ajaxRequest = new XMLHttpRequest();
+
+            ajaxRequest.onreadystatechange = onReadyStateChange;
+            //console.log(ajaxRequest.readyState);
+            ajaxRequest.open('GET', '/get-with-no-parameter');
+            ajaxRequest.send();
+        </script>
+    </body>
+</html>
